@@ -3,6 +3,7 @@
 Modelo MLP para prever churn (cancelamento) de clientes de telecom, com uma API em FastAPI.
 
 Dataset: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+Video Demonstrando: https://youtu.be/ZgeRQpJTej0
 
 ## Como rodar
 
