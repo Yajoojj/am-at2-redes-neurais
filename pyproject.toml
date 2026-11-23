@@ -1,0 +1,21 @@
+[project]
+name = "am-at2-redes-neurais"
+version = "0.1.0"
+description = "AT2 de Aprendizagem de Maquina - MLP + FastAPI"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.165.0",
+    "joblib>=1.6.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+    "nbconvert>=7.17.2",
+]

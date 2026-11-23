@@ -1,0 +1,52 @@
+### 1. Info
+GET http://127.0.0.1:8000/info
+User-Agent: Client-Avaliativo
+Accept: application/json
+
+### 2. Cliente com chance de cancelar
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "tenure": 2,
+  "MonthlyCharges": 95.5,
+  "TotalCharges": 191.0,
+  "SeniorCitizen": 1,
+  "Contract": "Month-to-month",
+  "InternetService": "Fiber optic",
+  "PaymentMethod": "Electronic check",
+  "TechSupport": "No"
+}
+
+### 3. Cliente que deve continuar
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "tenure": 60,
+  "MonthlyCharges": 45.0,
+  "TotalCharges": 2700.0,
+  "SeniorCitizen": 0,
+  "Contract": "Two year",
+  "InternetService": "DSL",
+  "PaymentMethod": "Bank transfer (automatic)",
+  "TechSupport": "Yes"
+}
+
+### 4. Entrada invalida (deve dar 422)
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "tenure": "invalido",
+  "MonthlyCharges": 95.5,
+  "TotalCharges": 191.0,
+  "SeniorCitizen": 1,
+  "Contract": "Month-to-month",
+  "InternetService": "Fiber optic",
+  "PaymentMethod": "Electronic check",
+  "TechSupport": "No"
+}
